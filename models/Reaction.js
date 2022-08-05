@@ -24,43 +24,10 @@ const reactionSchema = new Schema(
   {
       toJSON: {
           getters: true
-      }
+      },
+      id: false,
   }
 );
-
-const postSchema = new Schema(
-  {
-    thoughtText: {
-      type: String,
-      required: true,
-    },
-    username: {
-      type: String,
-      required: true,
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now(),
-      get: createdAtVal => dayjs(createdAtVal).format('MMM DD, YYYY h:mm a')
-    },
-    reactions: [reactionSchema]
-  },
-  {
-    toJSON: {
-      virtuals: true,
-      getters: true
-    },
-    id: false,
-  }
-);
-
-// Total count of reactions a thought has
-postSchema.virtual('reactionCount').get(function () {
-  return this.reactions.length;
-});
-
-
-const Post = model("post", postSchema);
 
   
   module.exports = reactionSchema;

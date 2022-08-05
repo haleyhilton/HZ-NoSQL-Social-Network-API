@@ -1,4 +1,6 @@
 const User = require('../models/User');
+// const { ObjectId } = require('mongoose').Types;
+// const { User, Thought } = require('../models');
 
 module.exports = {
 // get all users
