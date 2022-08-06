@@ -45,8 +45,8 @@ const User = model('User', userSchema);
 const handleError = (err) => console.error(err);
 User.create(
 {
-  username: 'johnsmith',
-  email: 'johnsmith@john.com',
+  username: 'averyrealhumanbean',
+  email: 'imnotarobot@gmail.com',
 },
 (err) => (err ? handleError(err) : console.log('Created new human'))
 );

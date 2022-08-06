@@ -10,7 +10,7 @@ This a simple social network web application with a built out API where users ca
     
 
 ## Deployment
-Let's get in touch!  Con
+Not deployed - use Insomnia to view funcitonality. Access to functionality can also be seen [here]: (https://drive.google.com/file/d/1r_BMkb1DxDyEVuk8NaPWeGWv6f5RoVkF/view)
 
 ## Questions
 Let's get in touch!  Contact me on GitHub at haleyhilton or email haleymariehilton@gmail.com.

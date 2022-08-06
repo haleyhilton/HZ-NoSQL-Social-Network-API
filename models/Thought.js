@@ -1,4 +1,6 @@
 const { Schema, model, Types } = require('mongoose');
+const dayjs = require('dayjs');
+
 
 const reactionSchema = new Schema(
     {
@@ -67,10 +69,10 @@ const handleError = (err) => console.error(err);
 Thought.create(
   {
     thoughtText: 'Oh wow - Im not so sure about that',
-    username: 'janedoe',
+    username: 'shesaidwhat',
     reactions: {
       reactionBody: 'What in the world!?',
-      username: 'janedoe',
+      username: 'youneverknow',
     }
   },
   (err) => (err ? handleError(err) : console.log('Created new human interaction'))
