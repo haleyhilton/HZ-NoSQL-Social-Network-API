@@ -40,7 +40,15 @@ userSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 });
 
-// Initialize  User model
-const User = model('user', userSchema);
+const User = model('User', userSchema);
+
+const handleError = (err) => console.error(err);
+User.create(
+{
+  username: 'johnsmith',
+  email: 'johnsmith@john.com',
+},
+(err) => (err ? handleError(err) : console.log('Created new human'))
+);
 
 module.exports = User;
